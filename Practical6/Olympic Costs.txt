@@ -3,7 +3,7 @@ costs=[1,8,15,7,5,14,43,40]
 #make a dictionary called Olympic_Games_costs to store the values of hosting the Summer Olympic games
 Olympic_Games_costs={'Los Angeles 1984':1,'Seoul 1988':8,'Barcelona 1992':15,'Atlanta 1996':7,'Sydney 2000':5,'Athens 2003':14,'Beijing 2008':43,'London 2012':40}
 
-#Import the matplotlib library
+#Import the numpy and matplotlib libraries
 #make a list of the city names called cities
 #make a list of the values of hosting the Summer Olympic games called costs
 #name each of the bars with the cities in the x-axis
