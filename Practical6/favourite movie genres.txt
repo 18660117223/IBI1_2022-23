@@ -13,6 +13,6 @@ plt.pie(sizes,labels=labels,autopct='%1.1f%%')
 plt.show()
 
 #Access a particular genre in the dictionary
-#print the number of students who prefer thee genre
+#print the number of students who prefer the genre
 genre='Comedy'
 print(genres_students[genre])
