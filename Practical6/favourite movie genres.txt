@@ -7,8 +7,8 @@ genres_students={'Comedy':73,'Action':42,'Romance':38,'Fantasy':28,'Science_fict
 #plot the pie chart with the given labels and sizes
 #show the plot
 import matplotlib.pyplot as plt
-labels='Comedy', 'Action', 'Romance', 'Fantasy', 'Science_fiction', 'Horror', 'Crime','Documentary', 'History', 'War'
-sizes = [73,42,38,28,22,19,28,12,8,7]
+labels=list(genres_students.keys())
+sizes=list(genres_students.values())
 plt.pie(sizes,labels=labels,autopct='%1.1f%%')
 plt.show()
 
