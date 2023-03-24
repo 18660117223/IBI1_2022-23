@@ -9,7 +9,7 @@ print(sorted_values)
 
 #make a list called cities to record the cities
 #import numpy library
-#convert cities array to numpy array
+#convert cities array to numpy array（I got this method from Hugo)
 #convert costs array to numpy array
 #sort the costs array and store it as sortedcosts
 #sort the cities based on the sortedcosts and store it as sorted_costs
