@@ -1,3 +1,6 @@
+#import os, pandas, matplotlib. pyplot, and numpy dictionaries
+#cd to the dictionary that has the aiming file
+#Read the 'full_data.csv' file as a pandas dataframe
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -5,6 +8,7 @@ import numpy as np
 os.chdir("D:/Cygwin/home/竹夭/IBI_2023/IBI1_2022-23/Practical7")
 covid_data = pd.read_csv("full_data.csv")
 
+# Select every 100th row of the 'total_cases' column from the first 1001 rows of the dataframe
 covid_data.iloc[0:1001:100,2]
 
 #find the rows where the location equal to Afghanistan
@@ -12,12 +16,16 @@ covid_data.iloc[0:1001:100,2]
 my_raw=covid_data["location"]=="Afghanistan"
 covid_data.loc[my_raw,"total_cases"]
 
-
+#select the data on 31 March 2020
+#select the 'location', 'new_cases', and 'new_deaths' columns for those rows
+#Calculate the average values of the 'new_cases' and 'new_deaths' columns for the filtered rows
+my_data = covid_data["date"] == "2020-03-31"
 my_data=covid_data["date"]=="2020-03-31"
 new_date=covid_data.loc[my_data,["location","new_cases","new_deaths"]]
 np.average(new_date["new_cases"])
 np.average(new_date["new_deaths"])
 
+# Create a boxplot for the 'new_cases' column of the filtered dataframe
 import matplotlib.pyplot as plt
 plt.boxplot(new_date["new_cases"])
 plt.title("new cases on 31 March 2020")
@@ -26,6 +34,12 @@ plt.boxplot(new_date["new_deaths"])
 plt.title("new deaths on 31 March 2020")
 plt.show()
 
+#extract worldwide COVID-19 data
+#plot the data of new_cases and new_deaths with different color
+#label the x and y axis
+#give a title to the plot
+#decorate the plot
+#show  the plot
 world_dates=covid_data["date"]
 world_new_cases=covid_data["new_cases"]
 world_new_deaths=covid_data["new_deaths"]
@@ -39,6 +53,16 @@ plt.tick_params(axis='y',colors='orange')
 plt.xticks(world_dates.iloc[0:len(world_dates):4],rotation=-90)
 plt.show()
 
+#NEW QUESTION
+#import the dictionaries
+#cd to the dictionary that has the aiming file
+#read the 'full_data.csv' file as a pandas dataframe
+#extract COVID-19 data for the United Kingdom
+#plot the data of new_cases and new_deaths with different color
+#label the x and y axis
+#give a title to the plot
+#decorate the plot
+#show  the plot
 import os
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -58,4 +82,11 @@ plt.title("new cases and total cases in UK over time")
 plt.tick_params(axis='x',colors='orange')
 plt.tick_params(axis='y',colors='orange')
 plt.show()
+
+
+
+
+
+
+
 
