@@ -1,2 +1,5 @@
-#How have new cases and total cases developed over time in the UK?
+How have new cases and total cases developed over time in the UK?
+corresponding lines:7536-7627
+result discussion:
+ the plot of the result has shown the new cases and total case changes over time in the UK as expected. The number of cases increased with time may be caused by the development of finance in the UK.
 
