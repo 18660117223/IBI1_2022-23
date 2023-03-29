@@ -6,8 +6,6 @@ import matplotlib.pyplot as plt
 import numpy as np
 os.chdir("D:/Cygwin/home/竹夭/IBI_2023/IBI1_2022-23/Practical7")
 covid_data = pd.read_csv("full_data.csv")
-
-covid_data.iloc[0:1001:100,2]
 U_data=covid_data["location"]=="United Kingdom"
 UK_data=covid_data.loc[U_data,["date","new_cases","total_cases"]]
 UK_dates=UK_data["date"]
