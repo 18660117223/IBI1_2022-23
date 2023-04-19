@@ -1,0 +1,31 @@
+#determine the dna sequence
+#convert the sequence to uppercase
+#find the start codon ATG and the stop codon TGA
+#calculate the distance between start and stop codon
+#calculate the length of the sequence
+#calculate the percentage of the coding sequence
+#if the percentage is more than 50%, label it as protein-coding
+#if the percentage is less than 10%, label it as non-coding
+#in other cases, label as unclear
+#return the result
+#print the result
+def protein_coding(dna_sequence):
+ dna_sequence=dna_sequence.upper()
+ start_codon=dna_sequence.find('ATG')
+ stop_codon=dna_sequence.find('TGA')
+ coding_distance=stop_codon-start_codon
+ length=len(dna_sequence)
+ percentage=(coding_distance/length)*100
+ if percentage>50:
+  label='protein-coding'
+ elif percentage<10:
+  label='non-coding'
+ else:
+  label='unclear'
+ return percentage,label
+ print(percentage,label)
+
+#an example to test the code
+dna_sequence='ACAAATGGGACTTACAGTGACA'
+percentage,label=protein_coding(dna_sequence)
+print(percentage,label)
