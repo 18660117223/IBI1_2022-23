@@ -1,0 +1,12 @@
+#define the function, which has two inputs, including the value of the house and the annual salary
+#compare the 5 times of annual salary and the value of the house
+#if the house value is smaller, print "Yes" to show that having the affordability
+#if the house value is bigger, print "No" to show that not have the affordability
+def calculate_affordability(value,salary):
+ if 5*salary>value:
+  print("Yes")
+ else:
+  print("No")
+
+#an example	of how this function should be called within my code
+calculate_affordability(600000,300000)
