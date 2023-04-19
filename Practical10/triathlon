@@ -1,0 +1,34 @@
+#create a class called triathlon
+#define the six parameters
+#Use a special method called __init__ to initialise some data attributes.
+#define the output structure
+#input the information of the person
+#print the result
+class triathlon:
+ name=""
+ location=""
+ swim_time=0
+ ride_time=0
+ run_time=0
+ total_time=0
+ def __init__(self,n,l,s,r,u,t):
+  self.name=n
+  self.location=l
+  self.swim_time=s
+  self.ride_time=r
+  self.run_time=u
+  self.total_time=t
+ def show(self):
+  print(self.name,self.location,self.swim_time,self.ride_time,self.run_time,self.total_time)
+result=triathlon("name","location",0,0,0,0)
+result.show()
+
+
+#an example to run my code
+
+result=triathlon("DouDou","Tianjin",1,10,12,23)
+result.show()
+
+
+
+ 
